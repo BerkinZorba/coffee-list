@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import HiddenTitle from './HiddenTitle';
-import HiddenDesc from './HiddenDesc';
-import HiddenList from './HiddenIng';
+import HiddenTitle from './hidden_cards/HiddenTitle';
+import HiddenDesc from './hidden_cards/HiddenDesc';
+import HiddenList from './hidden_cards/HiddenIng';
 
 export type Coffee = {
 	id: number;

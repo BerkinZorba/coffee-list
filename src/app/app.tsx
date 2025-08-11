@@ -15,7 +15,7 @@ const App = () => {
   
 
 	return (
-		<div className="bg-slate-100 h-full flex flex-wrap items-center items-center justify-center">
+		<div className="bg-slate-100 h-full flex flex-wrap items-center justify-center">
 			{coffeeList.map(kahve => (
         <Card key={kahve.id} kahve={kahve} /> ))}
 		</div>
