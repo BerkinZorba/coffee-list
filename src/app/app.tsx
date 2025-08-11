@@ -1,22 +1,13 @@
-import { useState, useEffect } from 'react';
-import Card, { Coffee } from 'components/Card';
+import Card  from 'components/Card';
+import { useCoffes } from 'hooks/useCoffes';
 
 const App = () => {
-  //Usss
-	const [coffeeList, setCoffeeList] = useState<Coffee[]>([]);
-
-  //Uffs
-  useEffect(() => {
-    const API_URL = "https://api.sampleapis.com/coffee/iced";
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((coffeeList) => setCoffeeList(coffeeList));
-  }, [])
+  const {data: coffeeList} = useCoffes();
   
 
 	return (
 		<div className="bg-slate-100 h-full flex flex-wrap items-center justify-center">
-			{coffeeList.map(kahve => (
+			{coffeeList?.map(kahve => (
         <Card key={kahve.id} kahve={kahve} /> ))}
 		</div>
 	);
